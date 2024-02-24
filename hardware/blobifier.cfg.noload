@@ -84,7 +84,7 @@ release_gcode:
 # oozing. Some filament are particularly oozy and may continue to ooze out of the nozzle for a second or two after retracting. Update 
 # as necessary.
 variable_purge_spd:           300	         ; Speed, in mm/min, of the purge.
-variable_purge_temp_min:      200	         ; Minimum nozzle temperature to permit a purge. Otherwise, purge will not occur.
+variable_purge_temp_min:      225	         ; Minimum nozzle temperature to permit a purge. Otherwise, purge will not occur.
 variable_purge_ret:             1          ; Retract length, in mm, after purging to prevent slight oozing. Adjust as necessary or provide in argument.
 
 # Adjust this so that your nozzle scrubs within the brush. Be careful not to go too low! Start out with a high value (like, 8) and go 
@@ -125,7 +125,7 @@ variable_purge_x: 6
 
 # Height of the tray. If it's below your bed, give this a negative number equal to the difference. If it's above your bed, give it a positive number 
 # You can find this number by homing, doing a QGL, and moving you toolhead above the tray, and lowering it with the paper method. 
-variable_tray_top: 4.5
+variable_tray_top: 3.7 
 
 # The following section defines how the purging sequence is executed. This is where you tune the purging to create pretty blobs. Refer to the 
 # visual reference for a better understanding. The visual is populated with default values. Below are some guides provided to help with tuning.
@@ -167,16 +167,16 @@ variable_tray_top: 4.5
 #
 
 # The height to raise the nozzle above the tray before purging. This allows any built up pressure to escape before the purge.
-variable_purge_start: 1
+variable_purge_start: 0.5
 
 # The maximum mm of filament (length) to extrude one iteration. A blob contains multiple iterations
-variable_max_iteration_length: 50
+variable_max_iteration_length: 30
 
 # The amount to raise Z for each iteration
 variable_iteration_z_raise: 5
 
 # As the nozzle gets higher and the blob wider, the Z raise needs to be reduced.
-variable_iteration_z_change: 1.2
+variable_iteration_z_change: 0.5
 
 # Maximum iterations per blob. 3 Should be sufficient for most flushes. If not, Blobifier will create multiple blobs for a single purge.
 variable_max_iterations_per_blob: 3
@@ -197,7 +197,7 @@ variable_part_cooling_fan: 1
 # Maximum number of blobs that fit in the bucket. Pauses the print if it exceeds this number.
 variable_max_blobs: 400
 # Enable the bucket shaker. You need to have the shaker.stl installed
-variable_enable_shaker: 1
+variable_enable_shaker: 0
 # The number of back-and-forth motions of one shake
 variable_bucket_shakes: 10
 # During shaking acceleration can often be higher because you don't neeed to keep print quality in mind
