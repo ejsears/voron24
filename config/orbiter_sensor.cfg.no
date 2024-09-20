@@ -38,16 +38,16 @@ gcode:
 #   filament_load_init
 # ********************************************************************************************************
 
-[filament_switch_sensor toolhead]
-switch_pin: ^nhk:gpio3
-pause_on_runout: False
-insert_gcode:
-    filament_load_init
+[filament_switch_sensor tool]
+switch_pin: ^pico:gpio3
+pause_on_runout: True
+# insert_gcode:
+#     filament_load_init
 
 
 #////////////////////////////////////////Filament Unload macros/////////////////////////////////////////////////
 [gcode_button filament_unload]
-pin: !nhk:gpio10 # remove the negation "!" for sensor v1 - use just PA9 as example
+pin: !pico:gpio16 # remove the negation "!" for sensor v1 - use just PA9 as example
 release_gcode:  # filament unload procedure   
   filament_unload_init
 press_gcode: # do not add any macro call here

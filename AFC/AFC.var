@@ -1,0 +1,26 @@
+{
+    "t0": {
+        "material": "",
+        "spool_id": "",
+        "color": "",
+        "tool_loaded": false
+    },
+    "t1": {
+        "material": "",
+        "spool_id": "",
+        "color": "",
+        "tool_loaded": false
+    },
+    "t2": {
+        "material": "",
+        "spool_id": "",
+        "color": "",
+        "tool_loaded": false
+    },
+    "t3": {
+        "material": "",
+        "spool_id": "",
+        "color": "",
+        "tool_loaded": false
+    }
+}

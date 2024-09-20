@@ -1,0 +1,30 @@
+[mcu AFC]
+canbus_uuid: 35c5b35ac310
+
+[filament_switch_sensor lane4_ex]
+switch_pin: ^AFC:PE10 
+
+[filament_switch_sensor lane4_tr]
+switch_pin: ^!AFC:PB2 
+
+[filament_switch_sensor lane3_ex] 
+switch_pin: ^AFC:PE9
+
+[filament_switch_sensor lane3_tr]  
+switch_pin: ^!AFC:PB1
+
+[filament_switch_sensor lane2_ex] 
+switch_pin: ^AFC:PE8
+
+[filament_switch_sensor lane2_tr]  
+switch_pin: ^!AFC:PB0
+
+[filament_switch_sensor lane1_ex] 
+switch_pin: ^AFC:PE7
+
+[filament_switch_sensor lane1_tr]  
+switch_pin: ^!AFC:PC5
+
+[filament_switch_sensor hub]
+switch_pin: ^AFC:PC4 #SW1
+pause_on_runout: False

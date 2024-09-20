@@ -25,6 +25,7 @@ cors_domains =
 	*://localhost:*
 	*://my.mainsail.xyz
 	*://app.fluidd.xyz
+	*://localhost:8080
 
 [file_manager]
 enable_object_processing = True
@@ -130,4 +131,20 @@ path = /home/eric/motors-sync
 origin = https://github.com/MRX8024/motors-sync.git
 primary_branch = main
 managed_services = klipper
+
+[update_manager filter_monitor]
+type = git_repo
+path = ~/klipper-filter_monitor
+origin = https://github.com/blankhaus/klipper-filter_monitor.git
+managed_services = klipper moonraker
+primary_branch = main
+install_script = install.sh
+
+[update_manager afc-software]
+type = git_repo
+path = ~/AFC-Klipper-Add-On
+origin = https://github.com/ArmoredTurtle/AFC-Klipper-Add-On.git
+managed_services = klipper
+primary_branch = main
+install_script = install-afc.sh
 
